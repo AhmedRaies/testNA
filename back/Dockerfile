@@ -10,7 +10,6 @@ COPY . /back
 
 ENV NUMBA_CACHE_DIR=/tmp/numba_cache
 
-RUN useradd appuser && chown -R appuser /back
-USER appuser
+#CMD ["cat","app.py"]
 
 CMD ["python","app.py"]
