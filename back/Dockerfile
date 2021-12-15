@@ -6,9 +6,7 @@ COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
 WORKDIR /back
-COPY . /back
-
-ENV NUMBA_CACHE_DIR=/tmp/numba_cache
+COPY . .
 
 #CMD ["cat","app.py"]
 

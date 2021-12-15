@@ -1,23 +1,17 @@
 version: '3'
-networks:
-  isolation-network:
-    driver: bridge
+
 services:
-  backend:
-    build:
-      context: ./back/
-      dockerfile: ./Dockerfile
-    ports:
-      - "6000:6000"
-    networks:
-      - isolation-network
-    
+
   frontend:
-    build:
-      context: ./front/
-      dockerfile: ./Dockerfile
-    image: front:tag
+    build: ./front
+
     ports:
       - "7000:7000"
-    networks:
-      - isolation-network
+  backend:
+    build: ./back
+
+    restart: always
+    ports:
+      - "1265:6000"
+        
+    
