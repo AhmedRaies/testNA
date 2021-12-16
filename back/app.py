@@ -12,7 +12,7 @@ from flask import Flask
 from flask import render_template, request
 app = Flask(__name__)
 
-# Import the libraries
+
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'wav'}
