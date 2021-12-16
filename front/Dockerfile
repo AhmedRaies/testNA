@@ -5,7 +5,5 @@ EXPOSE 7000
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
-WORKDIR /front
-COPY . .
 
 CMD ["python", "app.py"]
