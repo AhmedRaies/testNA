@@ -12,6 +12,6 @@ services:
 
     restart: always
     ports:
-      - "1265:6000"
+      - "1288:6000"
         
     
