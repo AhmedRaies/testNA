@@ -28,8 +28,6 @@ def allowed_file(filename):
 
 @app.route('/uploader', methods=['GET', 'POST'])
 def upload_file():
-    if request.method == 'GET':
-        return "hello"
     if request.method == 'POST':
         file = request.files['file']
         if file.filename == '':
